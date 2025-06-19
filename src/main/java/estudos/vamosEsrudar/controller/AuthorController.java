@@ -1,6 +1,6 @@
 package estudos.vamosEsrudar.controller;
 
-import estudos.vamosEsrudar.domain.DataDetails.DataDetailsAuthor;
+
 import estudos.vamosEsrudar.domain.dto.RequestAuthor;
 import estudos.vamosEsrudar.domain.entity.Author;
 import estudos.vamosEsrudar.domain.service.AuthorService;
@@ -33,9 +33,9 @@ public class AuthorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DataDetailsAuthor> buscarPorId(@PathVariable Long id) {
+    public ResponseEntity<RequestAuthor.DataDetailsAuthor> buscarPorId(@PathVariable Long id) {
         var autor = authorService.searchPeloID(id);
-        return ResponseEntity.ok(new DataDetailsAuthor(autor));
+        return ResponseEntity.ok(new RequestAuthor.DataDetailsAuthor(autor));
     }
 
     @DeleteMapping("/{id}")

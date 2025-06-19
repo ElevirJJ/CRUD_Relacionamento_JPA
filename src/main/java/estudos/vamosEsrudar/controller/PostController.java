@@ -1,11 +1,8 @@
 package estudos.vamosEsrudar.controller;
 
-import estudos.vamosEsrudar.domain.DataDetails.DataDetailsPost;
 import estudos.vamosEsrudar.domain.dto.RequestPost;
 import estudos.vamosEsrudar.domain.entity.Post;
 import estudos.vamosEsrudar.domain.service.PostService;
-import estudos.vamosEsrudar.repository.AuthorRespository;
-import estudos.vamosEsrudar.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,9 +32,9 @@ public class PostController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity <DataDetailsPost> getID(@PathVariable Long id){
+    public ResponseEntity <RequestPost.DataDetailsPost> getID(@PathVariable Long id){
         var dados = postService.searchPeloID(id);
-        return ResponseEntity.ok(new DataDetailsPost(dados));
+        return ResponseEntity.ok(new RequestPost.DataDetailsPost(dados));
     }
 
     @DeleteMapping("/{id}")

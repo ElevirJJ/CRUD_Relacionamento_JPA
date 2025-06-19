@@ -1,6 +1,6 @@
 package estudos.vamosEsrudar.controller;
 
-import estudos.vamosEsrudar.domain.DataDetails.DataDetailsComment;
+
 import estudos.vamosEsrudar.domain.dto.RequestComment;
 import estudos.vamosEsrudar.domain.entity.Comment;
 import estudos.vamosEsrudar.domain.service.CommentService;
@@ -35,9 +35,9 @@ public class CommentController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity <DataDetailsComment> buscarPorId (@PathVariable Long id){
+    public ResponseEntity <RequestComment.DataDetailsComment> buscarPorId (@PathVariable Long id){
         var getID = commentService.searchPeloID(id);
-        return ResponseEntity.ok(new DataDetailsComment(getID));
+        return ResponseEntity.ok(new RequestComment.DataDetailsComment(getID));
 
     }
 
