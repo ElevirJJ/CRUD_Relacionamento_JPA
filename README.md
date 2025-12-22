@@ -53,3 +53,30 @@ Relacionamentos bidirecionais com carregamento adequado dos dados
 
 Uso de DTOs para retornar respostas claras e sem redundância
 
+✅ Insomia - Json
+
+entity autor:
+
+{
+	"nome": "",
+	"descricao": ""
+}
+
+entity postagem:
+
+{
+  "titulo": "",
+  "texto": "",
+  "autorId": 1
+}
+
+entity comentarios:
+
+{
+	"comentario": "",
+	"postagemId" : 1,
+	"autorId" : 1
+}
+
+
+
