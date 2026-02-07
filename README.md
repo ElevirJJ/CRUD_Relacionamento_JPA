@@ -1,5 +1,5 @@
 📚 Estudos sobre Relacionamentos no JPA com Spring Boot
-Este projeto foi desenvolvido com o objetivo de estudar e praticar os principais tipos de relacionamentos entre entidades no JPA (Java Persistence API), utilizando o Spring Boot como base para criação de APIs 
+Este projeto foi desenvolvido com o objetivo de estudar e praticar os principais tipos de relacionamentos entre entidades no JPA (Java Persistence API), utilizando o Spring Boot como base para criação de APIs .
 
 🎯 Objetivos
 Compreender e implementar os relacionamentos:
